@@ -1,5 +1,4 @@
 
-
 const PORT = process.env.PORT || 3040;
 const app = require('./app');
 //const seed = require('../script/seed');
