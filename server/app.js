@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 
 
 // since we want a single page application, our server should send its index.html for any requests that dont match oen of our API routes
-app.get('*', (req, res) => {
+app.use('*', (req, res) => {
   res.sendFile(path.join(__dirname, '--', 'public/index.html'));
 })
 
