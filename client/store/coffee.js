@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import { attachment } from 'express/lib/response';
 
 //action types
 const SET_COFFEE = 'SET_COFFEE';
@@ -68,5 +69,21 @@ export const updateCoffee = (coffee, history) => {
     })
     dispatch(_updateCoffee(updated));
     history.push('/');
+  }
+}
+
+//reducer
+export default function (state = [], action) {
+  switch(action.type){
+    case SET_COFFEE:
+      return action.coffees;
+    case CREATE_COFFEE:
+      return [...state, action.coffee];
+    case REMOVE_COFFEE:
+      return [...state.filter(coffee => coffee.id !== action.coffee.id)];
+    case UPDATE_COFFEE:
+      return state.map(coffee => coffee.id === action.coffee.id ? action.coffee : coffee);
+    default:
+      return state;
   }
 }
