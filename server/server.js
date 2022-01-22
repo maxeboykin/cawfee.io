@@ -30,7 +30,9 @@ app.use((req, res, next) => {
 
 
 //sends index.html
-
+app.use('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '--', 'public/index.html'));
+})
 
 //error handling endware
 app.use((err, req, res, next) => {
