@@ -2,14 +2,14 @@ import Axios from 'axios';
 import { attachment } from 'express/lib/response';
 
 //action types
-const SET_COFFEE = 'SET_COFFEE';
+const SET_COFFEES = 'SET_COFFEES';
 const CREATE_COFFEE = 'CREATE_COFFEE';
 const REMOVE_COFFEE = 'REMOVE_COFFEE';
 const UPDATE_COFFEE = 'UPDATE_COFFEE';
 
 //action creators
 export const _setCoffees = (coffees) => ({
-  type: SET_COFFEE,
+  type: SET_COFFEES,
   coffees
 });
 export const _createCoffee = (coffee) => ({
@@ -75,7 +75,7 @@ export const updateCoffee = (coffee, history) => {
 //reducer
 export default function (state = [], action) {
   switch(action.type){
-    case SET_COFFEE:
+    case SET_COFFEES:
       return action.coffees;
     case CREATE_COFFEE:
       return [...state, action.coffee];
