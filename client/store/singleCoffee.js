@@ -28,3 +28,15 @@ export const clearCoffee = () => {
   }
 }
 
+
+//reducer
+export default function (state = {}, action) {
+  switch(action.type) {
+    case SET_COFFEE:
+      return action.coffee;
+    case CLEAR:
+      return {};
+    default:
+      return state;
+  }
+}
