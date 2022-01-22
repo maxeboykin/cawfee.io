@@ -15,3 +15,6 @@ router.put('/:coffeeId', function (req, res, next) {
 router.delete('/:coffeeId', function (req, res, next) {
 
 })
+
+
+module.exports = router;
