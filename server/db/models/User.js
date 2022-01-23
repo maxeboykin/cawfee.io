@@ -79,3 +79,22 @@ User.findbyToken = async function (token) {
     throw error;
   }
 }
+
+//hoooks
+
+const hashPassword = async(user) => {
+  //in case the password has been changed, we want to encrypt it with bcrypt
+  if(user.changed('password')) {
+    user.password = await bcrypt.hash(user.password, SALT_ROUNDS);
+  }
+}
+
+const setOrder = async(user) => {
+  const initOrder = await Order.create();
+  initOrder.setUser(user.id);
+}
+
+User.beforeCreate(hashPassword);
+User.beforeUpdate(hashPassword);
+User.afterCreate(setOrder);
+User.beforeBulkCreate(users => Promise.all(users.map(hashPassword)));
