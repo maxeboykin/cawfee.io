@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const {models: {User, Order, Coffee }} = require('../db');
 const OrderCoffee = require('../db/models/OrderCoffee');
-const {requireToken, isAdmin, isCurrentUser, isAdminOrCurrentUser } = require('./gatekeepingMiddleware');
+const {requireToken, isAdmin, isCurrentUser } = require('./gatekeepingMiddleware');
 
 
 
