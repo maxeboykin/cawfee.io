@@ -1,0 +1,621 @@
+
+html,
+body {
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  display: block;
+}
+
+nav a {
+  margin: 1em;
+}
+
+form div {
+  margin: 1em;
+  display: inline-block;
+}
+
+h1{
+font-family: 'Hind Siliguri', sans-serif;
+font-weight: 600;
+}
+
+button{
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: 400;
+}
+
+/* NavBar Stuff */
+.NavBarContainer {
+  display: flex;
+  margin-top: 10px;
+}
+
+.NavBarContainer img {
+width: 40%;
+}
+
+.nav-line{
+  margin:auto;
+  width: 97%;
+}
+
+.nav-line hr {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(240, 235, 235, 0), rgba(73, 129, 78, 1), rgba(0, 0, 0, 0));
+}
+
+.MainTitle {
+  background-color: transparent;
+  margin-top: 60px;
+  margin-right: 20px;
+  font-size:50pt;
+  color: whitesmoke;
+  min-width: 400px;
+}
+
+nav {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+
+}
+
+nav  a {
+  color: #2e581e;
+  font-family: 'Work Sans', sans-serif ;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* nav > a:hover {
+  border: 1px solid gold;
+} */
+
+.LoginOut {
+  display: flex;
+  flex-grow: 3;
+  align-items: center;
+  justify-content: right;
+  margin-bottom: 4%;
+}
+
+.LoginOut > * {
+  margin-top: 50px;
+  color:#446b31;
+  text-decoration: none;
+  padding: 1%;
+}
+
+.LoginOut > *:hover {
+  margin-top: 50px;
+  color:#446b31;
+  text-decoration: underline;
+}
+
+.CartButtonContainer {
+  display: inline-block;
+  position:relative;
+  top: 35px;
+  width: 150px;
+}
+
+.CartCounter {
+  display: flex;
+    z-index: 12;
+  bottom: 60px;
+  left: 42px;
+  position: relative;
+}
+
+.CartCounter p {
+  font-family: 'Work Sans', sans-serif ;
+  font-weight: 600;
+  color: #2e581e
+}
+
+/* Home View Stuff */
+.WelcomeContainer {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+}
+
+.WelcomeTitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  margin-bottom: 0px;
+  max-width: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.WelcomeTitleContainer button {
+  margin: 20px;
+}
+
+.WelcomeTitle {
+  margin-left: 20px;
+  margin-right: 20px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Auth Form Stuff */
+.AuthFormContainer {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+}
+
+.AuthFormContentContainer {
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  margin-bottom: 0px;
+  min-width: 500px;
+  min-height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.AuthForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.AuthFormTitle {
+  text-align: center;
+  display: block;
+}
+
+.signin {
+  margin-bottom: 0px;
+}
+
+/* All-Flowers Stuff */
+.all-flowers-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5%;
+  justify-content: space-between;
+}
+
+.all-flower-item{
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 28%;
+  text-align: left;
+  padding-bottom: 5%;
+}
+
+.all-flower-pic{
+  width: 100%;
+  box-shadow: 5px 5px 4px #cccc;
+}
+
+.priceInfo{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ItemInfo a, h2, h1, button {
+text-decoration: none;
+color: black;
+font-family: 'Hind Siliguri', sans-serif;
+font-weight: 400;
+font-size: 20px;
+display: inline-block;
+margin: 0;
+padding: 0;
+}
+
+.ItemInfo h1 {
+  font-weight: 600;
+}
+
+.AllFlowersUL {
+  list-style-type: none;
+  columns: 4;
+  min-width: max-content;
+}
+
+.AllFlowersUL li {
+  margin-bottom: 10px;
+  border: solid 1px gray;
+  margin-right: 20px;
+  min-width: 550px;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.AddToCartButton {
+  background: none;
+  border: none;
+  color: #374112;
+  font-weight: bold;
+}
+
+.AddToCartButton:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Single Flower Stuff */
+.single-plant-container {
+  margin: 20px;
+  display: flex;
+  padding: 4%;
+}
+
+#SingleFlowerQty {
+  max-height: 30px;
+  max-width: 50px;
+}
+
+.secondary-image-container{
+  display: flex;
+  width: 16%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.secondary-image-container img{
+  margin-bottom: 20px;
+  border: 2px solid gray;
+  opacity: 0.5;
+}
+
+.secondary-image-container img:hover{
+  margin-bottom: 20px;
+  border: 2px solid gray;
+  opacity: 1;
+  }
+
+.main-image-container{
+  width:55%;
+}
+
+.main-image-container img {
+  width: 100%;
+}
+
+.single-flower-info {
+  width: 35%;
+  line-height: 1.6;
+}
+
+.single-flower-info h2 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 45px;
+  font-weight: 400;
+  color: #1F4112;
+}
+
+
+.single-flower-info h1 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 25px;
+  font-weight: 800;
+  color: #1F4112;
+}
+
+.single-flower-info p {
+  font-family: 'Work Sans', sans-serif ;
+  font-weight: 400;
+  font-size: 20px;
+  color: #6b3144;
+  line-height: 1.9;
+  padding:5% 0;
+}
+
+.single-flower-info h4 {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2b330f;
+}
+
+.single-flower-info h1,h2,p{
+  display: block;
+}
+
+.single-flower-info button {
+  display: block;
+  padding: 0.5em 3em;
+  border:0.16em solid #788a3a;
+  margin:0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  /* text-transform:uppercase; */
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight:400;
+  color: #1F4112;
+  text-align:center;
+  transition: all 0.15s;
+}
+.single-flower-info button:hover{
+  color:#1F4112;
+  border-color:#1F4112;
+  text-decoration: none;
+  font-weight: bold;
+}
+.single-flower-info button:active{
+  color:#2b330f;
+  border-color:#2b330f;
+}
+
+.CartQtySelect {
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.CartQtySelect h4{
+  display:inline-block;
+  margin-right: 5%;
+}
+
+.input-form-container{
+  width: 100%;
+}
+
+input[type="number"]{
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2b330f;
+  background-color: #f2f2f2;
+  outline:none;
+  border:0px;
+  text-shadow: 0 0 0 #2b330f;
+}
+
+input[type="number"]::-webkit-inner-spin-button{
+  opacity: 1
+}
+
+input[type="number"]:focus{
+  border:0px;
+  outline: none;
+  color: transparent;
+}
+
+/* Cart Stuff */
+
+
+.cartUL {
+  list-style-type: none;
+}
+
+.cartUL li {
+  margin-bottom: 10px;
+  border: solid 1px gray;
+  margin-right: 20px;
+  min-width: 700px;
+}
+
+.cartItemView {
+  display: flex;
+  align-items: center;
+}
+
+.imageContainer {
+  margin-right: 20px;
+}
+
+.ItemPic {
+  max-width: 200px;
+  max-height: 200px;
+  padding: 20px;
+}
+
+.CartItemInfo {
+  flex-grow: 1;
+}
+
+#qty {
+  max-height: 30px;
+  max-width: 50px;
+}
+
+.divider {
+  color: rgb(46, 81, 87);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.RemoveFromCartButton {
+  background: none;
+  border: none;
+  color: rgb(46, 81, 87);
+  font-weight: bold;
+}
+
+.buttonContainer {
+  display: flex;
+}
+
+.RemoveFromCartButton:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.CartContainer {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px;
+}
+
+.cartItemsContainer {
+  background-color: whitesmoke;
+  margin-top: 0px;
+  padding:4%;
+  padding-top: 0%;
+}
+
+.ProceedToCheckoutContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: 450px;
+  min-height: 200px;
+  margin: 20px;
+  padding: 30px;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-height: 200px;
+}
+
+.ProceedToCheckoutContainer h1 {
+  font-size: x-large;
+}
+
+.ProceedToCheckoutContainer span {
+  font-weight: bold;
+}
+
+.ProceedToCheckoutButton {
+  min-height: 50px;
+  min-width: 450px;
+  background-color: gold;
+  border-radius: 10px;
+  font-size: larger;
+  margin-top: 1%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ProceedToCheckoutButton:hover {
+  background-color: goldenrod;
+  cursor: pointer;
+}
+
+.CartTitleContainer {
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  padding-left: 20px;
+  margin-bottom: 0px;
+  margin-top: 1%;
+}
+
+.CartTitle {
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: solid 1px grey;
+  flex-grow: 1;
+}
+
+main {
+  display: flex;
+}
+
+.CartItemInfo a, h2, h1 {
+  text-decoration: none;
+  color: black;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.CartItemInfo button{
+  margin-top: 1%;
+  font-size: 15px;
+}
+
+.CartItemInfo h1{
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+
+.CartQty {
+  max-height: 30px;
+  max-width: 50px;
+}
+
+
+/* Checkout Summary Stuff */
+.PlaceOrderContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: 450px;
+  min-height: 300px;
+  margin: 20px;
+  padding: 30px;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-height: 200px;
+}
+
+.tax {
+  margin-top: 0px;
+}
+
+.PlaceOrderContainer h1 {
+  font-size: x-large;
+}
+
+#OrderTotal {
+  color: rgb(170, 3, 3);
+  margin-top: 0px;
+  font-size: xx-large;
+}
+
+.PlaceOrderButton {
+  min-height: 50px;
+  min-width: 450px;
+  background-color: gold;
+  border-radius: 10px;
+  font-size: larger;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.PlaceOrderButton:hover {
+  background-color: goldenrod;
+  cursor: pointer;
+}
+
+/* Order Confirmation Stuff */
+.OCContainer {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+}
+
+.OCTitleContainer {
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  margin-bottom: 0px;
+  max-width: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.OCTitle {
+  margin-left: 20px;
+  margin-right: 20px;
+  flex-grow: 1;
+  text-align: center;
+}
