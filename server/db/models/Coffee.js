@@ -23,7 +23,7 @@ const Coffee = db.define('coffee', {
     allowNull: false,
     validate: {
       min: 0,
-      max: 1000
+      max: 10000
     }
   },
   weight: {
@@ -45,13 +45,6 @@ const Coffee = db.define('coffee', {
     type: Sequelize.TEXT,
     validate: {
       isUrl: true
-    }
-  },
-  description: {
-    type: Sequelize.TEXT,
-    allowNull: false,
-    validate: {
-      notEmpty: true
     }
   },
   shortDescription: {
