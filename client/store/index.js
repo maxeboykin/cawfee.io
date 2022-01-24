@@ -9,8 +9,8 @@ import coffees from './coffee';
 import coffee from './singleCoffee'
 import users from './users'
 import user from './singleUser'
-import cart from './cart'
-import localcart from './'
+//import cart from './cart'
+//import localcart from './'
 
 const reducer = combineReducers({
   auth,
@@ -18,8 +18,7 @@ const reducer = combineReducers({
   coffee,
   users,
   user,
-  cart,
-  localcart
+
 })
 
 const middleware = composeWithDevTools(
@@ -28,6 +27,6 @@ const middleware = composeWithDevTools(
 const store = createStore(reducer, middleware)
 
 export default store;
-export * from '.auth'
+export * from './auth'
 
 

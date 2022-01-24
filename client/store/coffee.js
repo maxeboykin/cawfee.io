@@ -28,7 +28,7 @@ export const _updateCoffee = (coffee) => ({
 //async creators
 export const fetchCoffees = () => {
   return async (dispatch) => {
-    const { data: coffees } = await Axios.get('/api/coffees');
+    const { data: coffees } = await Axios.get('/api/coffee');
     dispatch(_setCoffees(coffees));
   }
 }

@@ -1,16 +1,16 @@
-import React, {Component, Fragment, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {withRouter, Route, Switch, Redirect} from 'react-router-dom'
 import { Login, Signup } from './components/AuthForm';
 import AllCoffees from './components/AllCoffees';
-import Home from './components/Home';
-import {me} from './store'
+// import Home from './components/Home';
+import {me} from './store/auth'
 import SingleCoffee from './components/SingleCoffee';
 import SingleUser from './components/SingleUser';
 import AllUsers from './components/AllUsers';
-import CartView from './components/cartView';
-import CheckoutSummary from './components/CheckoutSummary';
-import ls from 'local-storage';
+// import CartView from './components/cartView';
+// import CheckoutSummary from './components/CheckoutSummary';
+// import ls from 'local-storage';
 
 
 const Routes = () => {
@@ -28,24 +28,22 @@ const Routes = () => {
       isAdmin ? (
         //this is for admins only
         <Switch>
-          <Route path="/home" component={Home} />
           <Route exact path = "/coffee" component={AllCoffees} />
           <Route exact path="/coffee/:coffeeid" component={SingleCoffee} />
           <Route exact path='/users' component={AllUsers} />
           <Route exact path='/users/:userId' component={SingleUser} />
           {/* <Route exact path='/cart' component={CartView} />
           <Route exact path='/cart/checkout' component={CheckoutSummary} /> */}
-            <Redirect to="/home" />
+            <Redirect to="/coffee" />
           </Switch>
       ) :
       //for users not admins
       <Switch>
-        <Route path="/home" component={Home} />
         <Route exact path = "/coffee" component={AllCoffees} />
         <Route exact path="/coffee/:coffeeid" component={SingleCoffee} />
         {/* <Route exact path='/cart' component={CartView} />
         <Route exact path='/cart/checkout' component={CheckoutSummary} /> */}
-        <Redirect to="/home" />
+        <Redirect to="/coffee" />
       </Switch>
     ) : (
       <Switch>

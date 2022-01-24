@@ -12,9 +12,10 @@ app.use(express.json());
 app.use('/auth', require('./auth'));
 app.use('/api', require('./api'));
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '--', 'public/index.html')));
-
 app.use(express.static(path.join(__dirname, '--', 'public')));
+
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '..', 'public/index.html')));
+
 
 //any remaining requests with an extension (.js, .css, etc) send 404
 
@@ -31,7 +32,7 @@ app.use((req, res, next) => {
 
 // since we want a single page application, our server should send its index.html for any requests that dont match oen of our API routes
 app.use('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '--', 'public/index.html'));
+  res.sendFile(path.join(__dirname, '..', 'public/index.html'));
 })
 
 //error handling endware
