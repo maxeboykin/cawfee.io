@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {withRouter, Route, Switch, Redirect} from 'react-router-dom'
-import { Login, Signup } from './components/AuthForm';
+import { Main, Login, Signup } from './components/AuthForm';
 import AllCoffees from './components/AllCoffees';
-// import Home from './components/Home';
+import Home from './components/Home';
 import {me} from './store/auth'
 import SingleCoffee from './components/SingleCoffee';
 import SingleUser from './components/SingleUser';
@@ -28,6 +28,7 @@ const Routes = () => {
       isAdmin ? (
         //this is for admins only
         <Switch>
+          <Route path="/" exact component={Home} />
           <Route exact path = "/coffee" component={AllCoffees} />
           <Route exact path="/coffee/:coffeeid" component={SingleCoffee} />
           <Route exact path='/users' component={AllUsers} />
@@ -39,6 +40,7 @@ const Routes = () => {
       ) :
       //for users not admins
       <Switch>
+        <Route path="/" exact component={Home} />
         <Route exact path = "/coffee" component={AllCoffees} />
         <Route exact path="/coffee/:coffeeid" component={SingleCoffee} />
         {/* <Route exact path='/cart' component={CartView} />
@@ -47,7 +49,7 @@ const Routes = () => {
       </Switch>
     ) : (
       <Switch>
-        <Route path='/' exact component={AllCoffees} />
+        <Route path="/" exact component={Main} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route exact path = "/coffee" component={AllCoffees} />
