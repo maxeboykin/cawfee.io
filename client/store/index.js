@@ -5,21 +5,21 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 
 //reducers imported
 import auth from './auth'
-import coffeeReducer from './coffee';
-import singleCoffeeReducer from './singleCoffee'
-import usersReducer from './users'
-import singleUserReducer from './singleUser'
-import cartReducer from './cart'
-import localCartReducer from './localcart'
+import coffees from './coffee';
+import coffee from './singleCoffee'
+import users from './users'
+import user from './singleUser'
+import cart from './cart'
+import localcart from './'
 
 const reducer = combineReducers({
   auth,
-  coffeeReducer,
-  singleCoffeeReducer,
-  usersReducer,
-  singleUserReducer,
-  cartReducer,
-  localCartReducer
+  coffees,
+  coffee,
+  users,
+  user,
+  cart,
+  localcart
 })
 
 const middleware = composeWithDevTools(

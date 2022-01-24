@@ -10,11 +10,16 @@ import { addLocalItem } from '../store/LocalCart';
 
 const AllCoffees = () => {
   const dispatch = useDispatch();
+  const
 
   useEffect(() => {
     dispatch(fetchCoffees());
     dispatch(me());
   }, []);
+
+  const handleAddToCart = (event) =>{
+
+  }
 
   return (
 
