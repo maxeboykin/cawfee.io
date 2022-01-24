@@ -75,10 +75,10 @@ async function seed() {
   console.log(`seeded ${coffees.length} coffees`)
   console.log(`seeded successfully`)
   return {
-    users: {
-      max: users[0],
-      sabi: users[1]
-    }
+    // users: {
+    //   max: users[0],
+    //   sabi: users[1]
+    // }
   }
 }
 
