@@ -30,10 +30,21 @@ const SingleCoffee = () => {
       setQty(1);
       setMainImage("");
     }
-  }, targetCoffee)
+  }, targetCoffee);
+
+  const handleChange(event) {
+    const qtyForm = parseInt(event.target.value);
+    setQty(qtyForm);
+  }
+
+  const handleAddToCart(){
+
+  }
 
   return (
+    <div>
 
+    </div>
   )
 
 }
