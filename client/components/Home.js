@@ -1,7 +1,6 @@
 import React, {useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import { connect } from 'react-redux'
-import ls from 'local-storage'
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -25,3 +24,5 @@ const Home = () => {
   )
 
 }
+
+export default Home;
