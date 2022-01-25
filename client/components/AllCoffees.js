@@ -38,7 +38,7 @@ const AllCoffees = () => {
                                         <div className='ItemInfo'>
                                             <div className="priceInfo">
                                             <h1>${coffeeObj.price / 100}</h1>
-                                            <button className='AddToCartButton' name={coffeeObj.id} onClick={this.handleAddToCart}>Add To Cart</button>
+                                            <button className='AddToCartButton' name={coffeeObj.id} onClick={handleAddToCart}>Add To Cart</button>
                                             </div>
                                         </div>
                                 </div>

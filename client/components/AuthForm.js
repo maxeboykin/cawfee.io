@@ -21,12 +21,14 @@ export const Main = () => {
 export const Login = () => {
   const error = useSelector(state => state.auth.error);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleSubmit = event => {
     event.preventDefault();
     const username = event.target.username.value.toLowerCase();
     const password = event.target.password.value;
     dispatch(authenticate(username, password, 'login'));
+    if (username && password) history.push("/coffee");
   };
 
 return (
@@ -48,7 +50,7 @@ return (
         <div>
           <button type="submit">Login</button>
         </div>
-        {error & error.response && <div>{error.response.data}</div>}
+        {/* {error & error.response && <div>{error.response.data}</div>} */}
       </form>
     </div>
   </div>

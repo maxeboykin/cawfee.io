@@ -48,7 +48,7 @@ width: 40%;
 .nav-line hr {
   border: 0;
   height: 2px;
-  background-image: linear-gradient(to right, rgba(240, 235, 235, 0), rgba(73, 129, 78, 1), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(240, 235, 235, 0), rgb(155, 98, 33), rgba(0, 0, 0, 0));
 }
 
 .MainTitle {
@@ -88,14 +88,14 @@ nav  a {
 
 .LoginOut > * {
   margin-top: 50px;
-  color:#446b31;
+  color:#4d3941;
   text-decoration: none;
   padding: 1%;
 }
 
 .LoginOut > *:hover {
   margin-top: 50px;
-  color:#446b31;
+  color:#4d3941;
   text-decoration: underline;
 }
 
