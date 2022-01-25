@@ -37,13 +37,32 @@ const SingleCoffee = () => {
     setQty(qtyForm);
   }
 
-  const handleAddToCart(){
+  const pictureSwap(event){
+    const newImageUrl = event.target.src;
+    setMainImage(newImageUrl);
+  }
 
+  const handleAddToCart(){
   }
 
   return (
     <div>
-
+      {targetCoffee.length < 1 ? <h1>Loading ...</h1> :
+      <div className="single-plant-container">
+        <div className="secondary-image-container">
+          <img src={targetCoffee.imageUrl} onClick={pictureSwap}/>
+          <img src={targetCoffee.imageUrlSeconday} onClick ={pictureSwap} />
+        </div>
+        <div className="main-image-container">
+          <img className="SingleItemPic" src={mainImage} />
+      </div>
+      <div className="single-flower-info">
+        <h2>{targetCoffee.name}</h2>
+        <h1>${targetCoffee.price / 100 }</h1>
+        <p>{targetCoffee.description}</p>
+      </div>
+      </div>
+      }
     </div>
   )
 
