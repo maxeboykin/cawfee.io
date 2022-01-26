@@ -30,7 +30,7 @@ const Routes = () => {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route exact path = "/coffee" component={AllCoffees} />
-          <Route exact path="/coffee/:coffeeid" component={SingleCoffee} />
+          <Route exact path="/coffee/:coffeeId" component={SingleCoffee} />
           <Route exact path='/users' component={AllUsers} />
           <Route exact path='/users/:userId' component={SingleUser} />
           {/* <Route exact path='/cart' component={CartView} />
@@ -42,7 +42,7 @@ const Routes = () => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route exact path = "/coffee" component={AllCoffees} />
-        <Route exact path="/coffee/:coffeeid" component={SingleCoffee} />
+        <Route exact path="/coffee/:coffeeId" component={SingleCoffee} />
         {/* <Route exact path='/cart' component={CartView} />
         <Route exact path='/cart/checkout' component={CheckoutSummary} /> */}
         <Redirect to="/coffee" />

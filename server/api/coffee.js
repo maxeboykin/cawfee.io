@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {models: {Coffee}} = require('../db');
+const {models: { Coffee }} = require('../db');
 const { requireToken, isAdmin} = require('./gatekeepingMiddleware');
 
 router.get('/', async (req, res, next) => {
@@ -20,7 +20,7 @@ router.post('/', requireToken, isAdmin, async (req, res, next) => {
   }
 })
 
-router.get('/:coffeeId', async (req, res, next) => {
+router.get("/:coffeeId", async (req, res, next) => {
   try {
     const singleCoffee = await Coffee.findByPk(req.params.coffeeId)
     res.json(singleCoffee)

@@ -6,7 +6,7 @@ import { me } from '../store/auth';
 
 
 
-const SingleCoffee = () => {
+const SingleCoffee = (props) => {
   const dispatch = useDispatch();
   const username = useSelector(state => state.auth.username);
   const userId = useSelector(state => state.auth.id);
@@ -14,35 +14,36 @@ const SingleCoffee = () => {
 
   const [qty, setQty] = useState(1);
   const [mainImage, setMainImage] = useState("");
-  // const [targetCoffee, setTargetCoffee] = useState({});
+  //const [targetCoffee, setTargetCoffee] = useState({});
 
   //const cart = useSelector(state = state.cart);
 
   //componentDidMount
   useEffect(() => {
-    dispatch(fetchCoffee(props.match.params.coffeeId))
+    dispatch(fetchCoffee(parseInt(props.match.params.coffeeId)))
   },[])
+  console.log('props', props);
 
 //componentDidUnmount
-  useEffect(() => {
-    return async () => {
-      dispatch(clearCoffee());
-      setQty(1);
-      setMainImage("");
-    }
-  }, targetCoffee);
+  // useEffect(() => {
+  //   return async () => {
+  //     dispatch(clearCoffee());
+  //     setQty(1);
+  //     setMainImage("");
+  //   }
+  // }, targetCoffee.name);
 
-  const handleChange(event) {
+  const handleChange = (event) => {
     const qtyForm = parseInt(event.target.value);
     setQty(qtyForm);
   }
 
-  const pictureSwap(event){
+  const pictureSwap = (event) => {
     const newImageUrl = event.target.src;
     setMainImage(newImageUrl);
   }
 
-  const handleAddToCart(){
+  const handleAddToCart = () => {
   }
 
   return (

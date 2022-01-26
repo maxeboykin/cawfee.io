@@ -2239,7 +2239,7 @@ const Routes = () => {
     component: _components_AllCoffees__WEBPACK_IMPORTED_MODULE_3__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     exact: true,
-    path: "/coffee/:coffeeid",
+    path: "/coffee/:coffeeId",
     component: _components_SingleCoffee__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     exact: true,
@@ -2264,7 +2264,7 @@ const Routes = () => {
     component: _components_AllCoffees__WEBPACK_IMPORTED_MODULE_3__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     exact: true,
-    path: "/coffee/:coffeeid",
+    path: "/coffee/:coffeeId",
     component: _components_SingleCoffee__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Redirect, {
     to: "/coffee"
@@ -2622,9 +2622,78 @@ const Navbar = () => {
 /*!*******************************************!*\
   !*** ./client/components/SingleCoffee.js ***!
   \*******************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/maxwellboykin/Personal Projects/cawfee.io/client/components/SingleCoffee.js: Unexpected token (20:2)\n\n\u001b[0m \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m (\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m   )\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 21 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m\u001b[0m\n    at Object._raise (/Users/maxwellboykin/Personal Projects/cawfee.io/node_modules/@babel/parser/lib/index.js:506:17)\n    at Object.raiseWithData (/Users/maxwellboykin/Personal Projects/cawfee.io/node_modules/@babel/parser/lib/index.js:499:17)\n    at Object.raise (/Users/maxwellboykin/Personal Projects/cawfee.io/node_modules/@babel/parser/lib/index.js:460:17)\n    at Object.unexpected (/Users/maxwellboykin/Personal Projects/cawfee.io/node_modules/@babel/parser/lib/index.js:3699:16)\n    at Object.parseParenAndDistinguishExpression (/Users/maxwellboykin/Personal Projects/cawfee.io/node_modules/@babel/parser/lib/index.js:12760:12)\n    at Object.parseExprAtom (/Users/maxwellboykin/Personal Projects/cawfee.io/node_modules/@babel/parser/lib/index.js:12321:23)\n    at Object.parseExprAtom (/Users/maxwellboykin/Personal Projects/cawfee.io/node_modules/@babel/parser/lib/index.js:7704:20)\n    at Object.parseExprSubscripts (/Users/maxwellboykin/Personal Projects/cawfee.io/node_modules/@babel/parser/lib/index.js:11999:23)\n    at Object.parseUpdate (/Users/maxwellboykin/Personal Projects/cawfee.io/node_modules/@babel/parser/lib/index.js:11979:21)\n    at Object.parseMaybeUnary (/Users/maxwellboykin/Personal Projects/cawfee.io/node_modules/@babel/parser/lib/index.js:11954:23)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_singleCoffee__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/singleCoffee */ "./client/store/singleCoffee.js");
+/* harmony import */ var _store_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/auth */ "./client/store/auth.js");
+
+
+
+
+
+
+const SingleCoffee = props => {
+  const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
+  const username = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(state => state.auth.username);
+  const userId = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(state => state.auth.id);
+  const targetCoffee = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(state => state.coffee);
+  const [qty, setQty] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1);
+  const [mainImage, setMainImage] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""); //const [targetCoffee, setTargetCoffee] = useState({});
+  //const cart = useSelector(state = state.cart);
+  //componentDidMount
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    dispatch((0,_store_singleCoffee__WEBPACK_IMPORTED_MODULE_2__.fetchCoffee)(parseInt(props.match.params.coffeeId)));
+  }, []);
+  console.log('props', props); //componentDidUnmount
+  // useEffect(() => {
+  //   return async () => {
+  //     dispatch(clearCoffee());
+  //     setQty(1);
+  //     setMainImage("");
+  //   }
+  // }, targetCoffee.name);
+
+  const handleChange = event => {
+    const qtyForm = parseInt(event.target.value);
+    setQty(qtyForm);
+  };
+
+  const pictureSwap = event => {
+    const newImageUrl = event.target.src;
+    setMainImage(newImageUrl);
+  };
+
+  const handleAddToCart = () => {};
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, targetCoffee.length < 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Loading ...") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "single-plant-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "secondary-image-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: targetCoffee.imageUrl,
+    onClick: pictureSwap
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: targetCoffee.imageUrlSeconday,
+    onClick: pictureSwap
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "main-image-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "SingleItemPic",
+    src: mainImage
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "single-flower-info"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, targetCoffee.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "$", targetCoffee.price / 100), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, targetCoffee.description))));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SingleCoffee);
 
 /***/ }),
 
