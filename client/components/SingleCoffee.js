@@ -20,7 +20,7 @@ const SingleCoffee = (props) => {
 
   //componentDidMount
   useEffect(() => {
-    dispatch(fetchCoffee(parseInt(props.match.params.coffeeId)))
+    dispatch(fetchCoffee(Number(props.match.params.coffeeId)))
   },[])
   console.log('props', props);
 

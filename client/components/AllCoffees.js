@@ -20,6 +20,7 @@ const AllCoffees = () => {
   const handleAddToCart = (event) =>{
 
   }
+  console.log('allCoffees', allCoffees);
 
   return (
     <div>

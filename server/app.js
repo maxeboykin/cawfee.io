@@ -7,14 +7,16 @@ app.use(morgan('dev'));
 
 //body parsing middleware
 app.use(express.json());
+//app.use(express.urlencoded({ extended: true }))
+app.use(express.static(path.join(__dirname, '..', 'public')));
+
 
 //auth and api routes
 app.use('/auth', require('./auth'));
 app.use('/api', require('./api'));
 
-app.use(express.static(path.join(__dirname, '..', 'public')));
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '..', 'public/index.html')));
+app.get('/*', (req, res) => res.sendFile(path.join(__dirname, '..', 'public/index.html')));
 
 
 //any remaining requests with an extension (.js, .css, etc) send 404
