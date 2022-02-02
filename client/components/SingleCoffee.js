@@ -17,12 +17,13 @@ const SingleCoffee = (props) => {
   //const [targetCoffee, setTargetCoffee] = useState({});
 
   //const cart = useSelector(state = state.cart);
-
+//console.log("props", props.match);
   //componentDidMount
   useEffect(() => {
-    dispatch(fetchCoffee(Number(props.match.params.coffeeId)))
+    const coffeeID = props.match.params.coffeeId;
+    dispatch(fetchCoffee(coffeeID))
   },[])
-  console.log('props', props);
+  console.log('props', props.match.params.coffeeId);
 
 //componentDidUnmount
   // useEffect(() => {

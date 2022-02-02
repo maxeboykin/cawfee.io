@@ -17,7 +17,8 @@ export const _clearCoffee = () => ({
 
 export const fetchCoffee = (coffeeId) => {
   return async (dispatch) => {
-    const {data: coffee} = await Axios.get(`api/coffee/${coffeeId}`);
+    const {data: coffee} = await Axios.get(`/api/coffee/${coffeeId}`);
+
     dispatch(_setCoffee(coffee));
   }
 }

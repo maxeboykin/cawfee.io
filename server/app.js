@@ -2,21 +2,28 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
+module.exports = app;
+
 
 app.use(morgan('dev'));
 
 //body parsing middleware
 app.use(express.json());
 //app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, '..', 'public')));
+
 
 
 //auth and api routes
 app.use('/auth', require('./auth'));
 app.use('/api', require('./api'));
 
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '..', 'public/index.html')));
 
-app.get('/*', (req, res) => res.sendFile(path.join(__dirname, '..', 'public/index.html')));
+
+
+app.use(express.static(path.join(__dirname, '..', 'public')));
+
+
 
 
 //any remaining requests with an extension (.js, .css, etc) send 404
@@ -44,4 +51,4 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).send(err.message || 'Internet server errror');
 });
 
-module.exports = app;
+
