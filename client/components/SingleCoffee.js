@@ -23,7 +23,9 @@ const SingleCoffee = (props) => {
     const coffeeID = props.match.params.coffeeId;
     dispatch(fetchCoffee(coffeeID))
   },[])
-  console.log('props', props.match.params.coffeeId);
+
+  console.log('targetCoffee', targetCoffee);
+
 
 //componentDidUnmount
   // useEffect(() => {
@@ -61,7 +63,7 @@ const SingleCoffee = (props) => {
       <div className="single-flower-info">
         <h2>{targetCoffee.name}</h2>
         <h1>${targetCoffee.price / 100 }</h1>
-        <p>{targetCoffee.description}</p>
+        <p>{targetCoffee.shortDescription}</p>
       </div>
       </div>
       }

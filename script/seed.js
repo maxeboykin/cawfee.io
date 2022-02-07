@@ -59,8 +59,20 @@ async function seed() {
     roastLevel: "Medium-Dark Roast"
   })
 
+  const doubleDouble = await Coffee.create({
+    name: 'Double Double',
+    brand: 'Portrait',
+    price: 2120,
+    weight: 310,
+    imageUrl: 'https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1643814824/solidus/rs9mzrhouacx8dh7psl4.png',
+    imageUrlsecondary:'',
+    shortDescription: "A rich, cozy body and slightly roasty profile is complimented by some citrusy aromatics and chocolaty sweetness.",
+    taste: "Comforting & Rich",
+    roastLevel: "Medium Roast"
+  })
 
-   const coffees = [nebula, spaceCadet, bomSenso];
+
+   const coffees = [nebula, spaceCadet, bomSenso, doubleDouble];
 
   //Adding items to cart
   // const order1 = await Order.findByPk(1)
