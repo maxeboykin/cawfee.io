@@ -96,8 +96,149 @@ async function seed() {
     roastLevel: "Medium Roast"
   })
 
+  const peruCutervo = await Coffee.create({
+    name: 'Peru Cutervo Ukuku',
+    brand: 'Anodyne',
+    price: 2120,
+    weight: 310,
+    imageUrl: "https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1643390224/solidus/gbgdyff6rp437xwlej9r.png",
+    imageUrlsecondary:'',
+    shortDescription: "Dense, chocolaty, and sweet, this coffee's luxuriously rich body is complemented by faint hints of orange and toasted nuts.    ",
+    taste: "Chocolaty & Sweet",
+    roastLevel: "Medium Roast"
+  })
 
-   const coffees = [nebula, spaceCadet, bomSenso, doubleDouble, israelSalazar, nebilyerValley];
+
+  const aliyeMajo = await Coffee.create({
+    name: 'Peru Cutervo Ukuku',
+    brand: 'Anodyne',
+    price: 2120,
+    weight: 310,
+    imageUrl: "https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1643814759/solidus/xu721geeixq7u2uefetu.png",
+    imageUrlsecondary:'',
+    shortDescription: "Dense, chocolaty, and sweet, this coffee's luxuriously rich body is complemented by faint hints of orange and toasted nuts.    ",
+    taste: "Chocolaty & Sweet",
+    roastLevel: "Medium Roast"
+  })
+
+  const ethiopiaArdiNatural = await Coffee.create({
+    name: 'Peru Cutervo Ukuku',
+    brand: 'Anodyne',
+    price: 2120,
+    weight: 310,
+    imageUrl: "https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1642608351/solidus/n3oozjqobhefvxgchb0o.png",
+    imageUrlsecondary:'',
+    shortDescription: "Dense, chocolaty, and sweet, this coffee's luxuriously rich body is complemented by faint hints of orange and toasted nuts.    ",
+    taste: "Chocolaty & Sweet",
+    roastLevel: "Medium Roast"
+  })
+
+
+  const losCrestones = await Coffee.create({
+    name: 'Peru Cutervo Ukuku',
+    brand: 'Anodyne',
+    price: 2120,
+    weight: 310,
+    imageUrl: "https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1642608336/solidus/jrdygooskkoigcffc1wf.png",
+    imageUrlsecondary:'',
+    shortDescription: "Dense, chocolaty, and sweet, this coffee's luxuriously rich body is complemented by faint hints of orange and toasted nuts.    ",
+    taste: "Chocolaty & Sweet",
+    roastLevel: "Medium Roast"
+  })
+
+
+  const peruAlbertoSaulBenavides = await Coffee.create({
+    name: 'Peru Cutervo Ukuku',
+    brand: 'Anodyne',
+    price: 2120,
+    weight: 310,
+    imageUrl: "https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1642022393/solidus/kcx0de8fpqd8mcqccm5m.png",
+    imageUrlsecondary:'',
+    shortDescription: "Dense, chocolaty, and sweet, this coffee's luxuriously rich body is complemented by faint hints of orange and toasted nuts.    ",
+    taste: "Chocolaty & Sweet",
+    roastLevel: "Medium Roast"
+  })
+
+  const peruRobinsonRuiz = await Coffee.create({
+    name: 'Peru Cutervo Ukuku',
+    brand: 'Anodyne',
+    price: 2120,
+    weight: 310,
+    imageUrl: "https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1642022407/solidus/hfl3ofd1cdgtszdobsvm.png",
+    imageUrlsecondary:'',
+    shortDescription: "Dense, chocolaty, and sweet, this coffee's luxuriously rich body is complemented by faint hints of orange and toasted nuts.    ",
+    taste: "Chocolaty & Sweet",
+    roastLevel: "Medium Roast"
+  })
+
+
+  const ethiopiaDimicha = await Coffee.create({
+    name: 'Peru Cutervo Ukuku',
+    brand: 'Anodyne',
+    price: 2120,
+    weight: 310,
+    imageUrl: "https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1642022372/solidus/u98zk7cu4qf5cyc3n8id.png",
+    imageUrlsecondary:'',
+    shortDescription: "Dense, chocolaty, and sweet, this coffee's luxuriously rich body is complemented by faint hints of orange and toasted nuts.    ",
+    taste: "Chocolaty & Sweet",
+    roastLevel: "Medium Roast"
+  })
+
+
+  const barry = await Coffee.create({
+    name: 'Peru Cutervo Ukuku',
+    brand: 'Anodyne',
+    price: 2120,
+    weight: 310,
+    imageUrl: "https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1641567960/solidus/bmjvguwj6najaamo2lra.png",
+    imageUrlsecondary:'',
+    shortDescription: "Dense, chocolaty, and sweet, this coffee's luxuriously rich body is complemented by faint hints of orange and toasted nuts.    ",
+    taste: "Chocolaty & Sweet",
+    roastLevel: "Medium Roast"
+  })
+
+
+  const hondurasLasPenitas = await Coffee.create({
+    name: 'Peru Cutervo Ukuku',
+    brand: 'Anodyne',
+    price: 2120,
+    weight: 310,
+    imageUrl: "https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1642107166/solidus/qjnq4q8q5ejl8efovb4w.png",
+    imageUrlsecondary:'',
+    shortDescription: "Dense, chocolaty, and sweet, this coffee's luxuriously rich body is complemented by faint hints of orange and toasted nuts.    ",
+    taste: "Chocolaty & Sweet",
+    roastLevel: "Medium Roast"
+  })
+
+
+  const estrellaGallito = await Coffee.create({
+    name: 'Peru Cutervo Ukuku',
+    brand: 'Anodyne',
+    price: 2120,
+    weight: 310,
+    imageUrl: "https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1643821068/solidus/htg8ctcotvem1hnwybtw.png",
+    imageUrlsecondary:'',
+    shortDescription: "Dense, chocolaty, and sweet, this coffee's luxuriously rich body is complemented by faint hints of orange and toasted nuts.    ",
+    taste: "Chocolaty & Sweet",
+    roastLevel: "Medium Roast"
+  })
+
+
+  const laCumbreManzano = await Coffee.create({
+    name: 'Peru Cutervo Ukuku',
+    brand: 'Anodyne',
+    price: 2120,
+    weight: 310,
+    imageUrl: "https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1643821051/solidus/uoskprswafhydabywyap.png",
+    imageUrlsecondary:'',
+    shortDescription: "Dense, chocolaty, and sweet, this coffee's luxuriously rich body is complemented by faint hints of orange and toasted nuts.    ",
+    taste: "Chocolaty & Sweet",
+    roastLevel: "Medium Roast"
+  })
+
+
+
+   const coffees = [nebula, spaceCadet, bomSenso, doubleDouble, israelSalazar, nebilyerValley, peruCutervo, laCumbreManzano, estrellaGallito, hondurasLasPenitas, ethiopiaDimicha, peruRobinsonRuiz, losCrestones, peruAlbertoSaulBenavides, ethiopiaArdiNatural, aliyeMajo, barry];
 
   //Adding items to cart
   // const order1 = await Order.findByPk(1)
