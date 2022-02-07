@@ -23,6 +23,9 @@ const Brand = db.define('brand', {
       notEmpty: true
     }
   },
+  funFact: {
+    type: Sequelize.STRING,
+  },
   imageUrl: {
     type: Sequelize.TEXT,
     allowNull: false,

@@ -1,6 +1,7 @@
 'use strict'
 
 const {db, models: {User, Coffee, Order} } = require('../server/db')
+const Brand = require('../server/db/models/Brand')
 
 /**
  * seed - this function clears the database, updates tables to
@@ -243,6 +244,10 @@ async function seed() {
 
    //Adding Brands
 
+   const anodyne = await Brand.create({
+     name: 'Anondyne',
+     location:
+   })
 
 
 
