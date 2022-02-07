@@ -23,7 +23,7 @@ async function seed() {
 
   const users = [max, sabi, hyo, krem, brendan, kelsey, sean, takumi];
 
-  //Creating Plants
+  //Creating Coffees
   const nebula = await Coffee.create({
     name: 'Nebula - a Dark Roast',
     brand: 'Mother Tongue',
@@ -239,6 +239,12 @@ async function seed() {
 
 
    const coffees = [nebula, spaceCadet, bomSenso, doubleDouble, israelSalazar, nebilyerValley, peruCutervo, laCumbreManzano, estrellaGallito, hondurasLasPenitas, ethiopiaDimicha, peruRobinsonRuiz, losCrestones, peruAlbertoSaulBenavides, ethiopiaArdiNatural, aliyeMajo, barry];
+
+
+   //Adding Brands
+
+
+
 
   //Adding items to cart
   // const order1 = await Order.findByPk(1)

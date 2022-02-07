@@ -23,6 +23,13 @@ const Brand = db.define('brand', {
       notEmpty: true
     }
   },
+  imageUrl: {
+    type: Sequelize.TEXT,
+    allowNull: false,
+    validate: {
+      isUrl: true
+    }
+  },
 })
 
 module.exports = Brand;

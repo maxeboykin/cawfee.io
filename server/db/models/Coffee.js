@@ -11,13 +11,13 @@ const Coffee = db.define('coffee', {
       notEmpty: true
     }
   },
-  brand: {
-    type: Sequelize.STRING,
-    allowNull: false,
-    validate: {
-      notEmpty: true
-    }
-  },
+  // brand: {
+  //   type: Sequelize.STRING,
+  //   allowNull: false,
+  //   validate: {
+  //     notEmpty: true
+  //   }
+  // },
   price: {
     type: Sequelize.INTEGER,
     allowNull: false,
@@ -67,7 +67,15 @@ const Coffee = db.define('coffee', {
     validate: {
       notEmpty: true
     }
-  }
+  },
+  // region: {
+  //   type: Sequelize.TEXT,
+  //   allowNull: false,
+  //   validate: {
+  //     notEmpty: true
+  //   }
+  // },
+
 })
 
 module.exports = Coffee;
