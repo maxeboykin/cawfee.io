@@ -71,8 +71,33 @@ async function seed() {
     roastLevel: "Medium Roast"
   })
 
+  const israelSalazar = await Coffee.create({
+    name: 'Israel Salazar',
+    brand: 'Panther',
+    price: 2590,
+    weight: 310,
+    imageUrl: 'https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1642608147/solidus/qfx77h4einddikmep7qm.png',
+    imageUrlsecondary:'',
+    shortDescription: "We're getting fruit cocktail vibes from this densely sweet cup: juicy blood orange acidity meets notes of green grape, with a sweet brown sugar finish.",
+    taste: "Sweet & Tart",
+    roastLevel: "Light-Medium Roast"
+  })
 
-   const coffees = [nebula, spaceCadet, bomSenso, doubleDouble];
+
+  const nebilyerValley = await Coffee.create({
+    name: 'Nebilyer Valley, Papua New Guinea',
+    brand: 'Highwire',
+    price: 2240,
+    weight: 310,
+    imageUrl: 'https://res.cloudinary.com/roastcollective/image/upload/h_1600,w_1600,f_jpg,fl_progressive:steep,q_auto:good/v1642876457/solidus/nk4ybcdwjho4i8sav4ph.png',
+    imageUrlsecondary:'',
+    shortDescription: "This particularly dynamic cup features a soft pear sweetness, with a twist of lime and a hint of gingery spice.",
+    taste: "Sweet & Tart",
+    roastLevel: "Medium Roast"
+  })
+
+
+   const coffees = [nebula, spaceCadet, bomSenso, doubleDouble, israelSalazar, nebilyerValley];
 
   //Adding items to cart
   // const order1 = await Order.findByPk(1)
